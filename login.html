@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sistema SEA</title>
+</head>
+<body>
+    <h1>Iniciar Sesión</h1>
+    <form id="loginForm" action="auth.php" method="POST">
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" required><br>
+        
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required><br>
+        
+        <button type="submit">Iniciar Sesión</button>
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        const loginForm = document.getElementById('loginForm');
+        const message = document.getElementById('message');
+
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(loginForm);
+            const response = await fetch('auth.php', {
+                method: 'POST',
+                body: formData
+            });
+
+            const result = await response.json();
+
+            if (result.status === 'success') {
+                message.textContent = 'Inicio de sesión exitoso. Redirigiendo...';
+                message.style.color = 'green';
+                setTimeout(() => {
+                    window.location.href = 'dashboards/dashboard.php';
+                }, 2000);
+            } else {
+                message.textContent = result.message;
+                message.style.color = 'red';
+            }
+        });
+    </script>
+</body>
+</html>
