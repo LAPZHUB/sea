@@ -1,0 +1,156 @@
+/* Estilos Minimalistas y Elegantes para el Sistema Espejo de Afiliación */
+
+/* Reset de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Tipografía y colores principales */
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4; /* Fondo claro y neutro */
+    color: #333333; /* Texto en tono gris oscuro */
+    line-height: 1.6;
+  }
+  
+  /* Encabezados */
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: #222222; /* Texto más destacado */
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.75rem;
+  }
+  
+  /* Contenedores */
+  .container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Botones */
+  button {
+    background-color: #4CAF50; /* Verde elegante */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049; /* Verde más intenso al pasar el mouse */
+  }
+  
+  button:disabled {
+    background-color: #cccccc; /* Botón deshabilitado */
+    cursor: not-allowed;
+  }
+  
+  /* Tablas */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 1rem;
+  }
+  
+  table th, table td {
+    padding: 0.75rem;
+    text-align: left;
+  }
+  
+  table th {
+    background-color: #f8f9fa;
+    color: #555555;
+    border-bottom: 2px solid #dddddd;
+  }
+  
+  table td {
+    border-bottom: 1px solid #eeeeee;
+  }
+  
+  table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Formularios */
+  input, select, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #ffffff;
+  }
+  
+  input:focus, select:focus, textarea:focus {
+    border-color: #4CAF50; /* Verde para foco */
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  }
+  
+  /* Cards */
+  .card {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Links */
+  a {
+    color: #4CAF50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #3e8e41;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
+  
+    table th, table td {
+      padding: 0.5rem;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    h2 {
+      font-size: 1.75rem;
+    }
+  
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+  
