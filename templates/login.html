@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Iniciar Sesión</h1>
-    <form id="loginForm" action="auth.php" method="POST">
+    <form id="loginForm" action="/modules/auth.php" method="POST">
         <label for="username">Usuario:</label>
         <input type="text" id="username" name="username" required><br>
         
@@ -27,7 +27,7 @@
             e.preventDefault();
 
             const formData = new FormData(loginForm);
-            const response = await fetch('auth.php', {
+            const response = await fetch('/modules/auth.php', {
                 method: 'POST',
                 body: formData
             });
@@ -38,7 +38,7 @@
                 message.textContent = 'Inicio de sesión exitoso. Redirigiendo...';
                 message.style.color = 'green';
                 setTimeout(() => {
-                    window.location.href = 'dashboards/dashboard.php';
+                    window.location.href = '/dashboards/dashboard.php';
                 }, 2000);
             } else {
                 message.textContent = result.message;

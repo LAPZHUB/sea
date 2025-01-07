@@ -2,7 +2,7 @@
 // layout.php: Archivo base para incluir encabezado y pie de página
 session_start();
 if (!isset($_SESSION['role'])) {
-    header("Location: login.html");
+    header("Location: /templates/login.html");
     exit;
 }
 
@@ -18,17 +18,17 @@ function renderFooter() {
 
 <!-- superuser_dashboard.php -->
 <?php
-include 'layout.php';
+include '/includes/layout.php';
 if ($_SESSION['role'] !== 'superuser') {
-    header("Location: login.html");
+    header("Location: /templates/login.html");
     exit;
 }
 renderHeader("Consola Superusuario");
 ?>
 <nav>
-    <a href="manage_users.php">Gestionar Usuarios</a>
-    <a href="global_reports.php">Reportes Globales</a>
-    <a href="permissions.php">Gestión de Permisos</a>
+    <a href="/modules/manage_users.php">Gestionar Usuarios</a>
+    <a href="/modules/global_reports.php">Reportes Globales</a>
+    <a href="/modules/permissions.php">Gestión de Permisos</a>
 </nav>
 <?php
 renderFooter();
@@ -36,17 +36,17 @@ renderFooter();
 
 <!-- dirigente_dashboard.php -->
 <?php
-include 'layout.php';
+include '/includes/layout.php';
 if ($_SESSION['role'] !== 'dirigente') {
-    header("Location: login.html");
+    header("Location: /templates/login.html");
     exit;
 }
 renderHeader("Consola Dirigente");
 ?>
 <nav>
-    <a href="manage_leaders.php">Gestionar Líderes</a>
-    <a href="manage_capturistas.php">Gestionar Capturistas</a>
-    <a href="affiliates_report.php">Resumen de Afiliados</a>
+    <a href="/modules/manage_leaders.php">Gestionar Líderes</a>
+    <a href="/modules/manage_capturistas.php">Gestionar Capturistas</a>
+    <a href="/modules/affiliates_report.php">Resumen de Afiliados</a>
 </nav>
 <?php
 renderFooter();
@@ -54,17 +54,17 @@ renderFooter();
 
 <!-- lider_dashboard.php -->
 <?php
-include 'layout.php';
+include '/includes/layout.php';
 if ($_SESSION['role'] !== 'lider') {
-    header("Location: login.html");
+    header("Location: /templates/login.html");
     exit;
 }
 renderHeader("Consola Líder");
 ?>
 <nav>
-    <a href="manage_capturistas.php">Gestionar Capturistas</a>
-    <a href="register_affiliate.php">Registrar Afiliado</a>
-    <a href="affiliates_report.php">Consultar Afiliados</a>
+    <a href="/modules/manage_capturistas.php">Gestionar Capturistas</a>
+    <a href="/modules/register_affiliate.php">Registrar Afiliado</a>
+    <a href="/modules/affiliates_report.php">Consultar Afiliados</a>
 </nav>
 <?php
 renderFooter();
@@ -72,16 +72,16 @@ renderFooter();
 
 <!-- capturista_dashboard.php -->
 <?php
-include 'layout.php';
+include '/includes/layout.php';
 if ($_SESSION['role'] !== 'capturista') {
-    header("Location: login.html");
+    header("Location: /templates/login.html");
     exit;
 }
 renderHeader("Consola Capturista");
 ?>
 <nav>
-    <a href="register_affiliate.php">Registrar Afiliado</a>
-    <a href="affiliates_report.php">Consultar Afiliados</a>
+    <a href="/modules/register_affiliate.php">Registrar Afiliado</a>
+    <a href="/modules/affiliates_report.php">Consultar Afiliados</a>
 </nav>
 <?php
 renderFooter();

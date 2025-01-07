@@ -2,12 +2,12 @@
 // manage_users.php: Listar usuarios
 session_start();
 if ($_SESSION['role'] !== 'superuser') {
-    header("Location: login.html");
+    header("Location: /templates/login.html");
     exit;
 }
 
-include 'layout.php';
-include 'db.php';
+include '/includes/layout.php';
+include '/includes/db.php';
 
 renderHeader("Gestión de Usuarios");
 
@@ -48,7 +48,7 @@ try {
 </table>
 
 <nav>
-    <a href="create_user.php">Crear Usuario</a>
+     <a href="/modules/create_user.php">Crear Usuario</a>
 </nav>
 
 <?php
