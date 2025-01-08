@@ -2,7 +2,8 @@
 // export_excel.php
 
 require_once '../includes/db.php'; // Conexión a la base de datos
-require '../vendor/autoload.php'; // Autoload para PHPSpreadsheet
+require  'C:\xampp\htdocs\SEA\vendor\autoload.php';
+
 
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
